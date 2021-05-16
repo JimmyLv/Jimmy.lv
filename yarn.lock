@@ -64,6 +64,11 @@
   resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.2.5.tgz#ae13981bc8711c98313a6ac1c361194d6bf2d39b"
   integrity sha512-+rEx4jLOeZpUcdvll7jEg/7hNbwYvHWFy4IGW/tk2JdbyB3SJVyIP6arAwzTH/sp/pO9jftfyZnRj4//sLbLvQ==
 
+"@textlint/ast-node-types@^4.4.3":
+  version "4.4.3"
+  resolved "https://registry.yarnpkg.com/@textlint/ast-node-types/-/ast-node-types-4.4.3.tgz#fdba16e8126cddc50f45433ce7f6c55e7829566c"
+  integrity sha512-qi2jjgO6Tn3KNPGnm6B7p6QTEPvY95NFsIAaJuwbulur8iJUEenp1OnoUfiDaC/g2WPPEFkcfXpmnu8XEMFo2A==
+
 "@textlint/ast-tester@^2.1.6":
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/@textlint/ast-tester/-/ast-tester-2.1.6.tgz#c7a0308c862426445f551ceb6cf602b35a0e4647"
@@ -196,6 +201,13 @@
   integrity sha512-PJM3u0dnKyFCQJfhS+ft4OPse10P2PXz7bM2YJMyEs6kKOc2hDvZE7CH8F85GuSL9H5gToTqJ9/c3Yy4I3S+iA==
   dependencies:
     "@textlint/ast-node-types" "^4.2.5"
+
+"@textlint/types@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/@textlint/types/-/types-1.5.5.tgz#9c82dbcbf4e00116573f05c6739c6c8ec3b35304"
+  integrity sha512-80P6fcqgsG9bP6JgR6W/E/oIx+71pplaicYCvvB4vMIeGk0OnWls4Q21kCpDYmq/C/ABtZ/Gy/Ov/8ExQPeQ7A==
+  dependencies:
+    "@textlint/ast-node-types" "^4.4.3"
 
 "@textlint/utils@^1.0.3":
   version "1.0.3"
@@ -2730,13 +2742,23 @@ textlint-rule-helper@^2.0.0:
     structured-source "^3.0.2"
     unist-util-visit "^1.1.0"
 
-textlint-rule-ja-space-between-half-and-full-width@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-2.0.1.tgz#a527f83bd833149763e4043965f796c9ec2192ba"
-  integrity sha1-pSf4O9gzFJdj5AQ5ZfeWyewhkro=
+textlint-rule-helper@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/textlint-rule-helper/-/textlint-rule-helper-2.2.0.tgz#30522ba904a03849d57ea3e5ebd5920027cd8da3"
+  integrity sha512-9S5CsgQuQwPjM2wvr4JGdpkLf+pR9gOjedSQFa/Dkrbh+D9MXt1LIR4Jvx1RujKtt2nq42prmEX2q3xOxyUcIQ==
+  dependencies:
+    "@textlint/ast-node-types" "^4.4.3"
+    "@textlint/types" "^1.5.5"
+    structured-source "^3.0.2"
+    unist-util-visit "^1.1.0"
+
+textlint-rule-ja-space-between-half-and-full-width@2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/textlint-rule-ja-space-between-half-and-full-width/-/textlint-rule-ja-space-between-half-and-full-width-2.1.3.tgz#7678629bd42e3c5af0010c920d61baef316ca72f"
+  integrity sha512-Unvqh5C92BUPktVEN8L6occpo6mve0fLlxDwY8B6U9ZzBp0vWasV04GcDKKifDDqYAitm3fAMYtmd2t2J1Zv5A==
   dependencies:
     match-index "^1.0.1"
-    textlint-rule-helper "^2.0.0"
+    textlint-rule-helper "^2.2.0"
 
 textlint-rule-no-todo@2.0.1:
   version "2.0.1"
